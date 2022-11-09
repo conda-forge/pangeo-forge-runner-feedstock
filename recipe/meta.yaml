@@ -1,5 +1,5 @@
 {% set name = "pangeo-forge-runner" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pangeo-forge-runner-{{ version }}.tar.gz
-  sha256: 1e977d14990a8a264fe951d2b2021a74503622a277fc29e9ef1c9ab5722297be
+  sha256: 52403dbaa96cffb1d74b8ff454490a0711a4df26c297d8b9dd5e740f17735f41
 
 build:
   entry_points:
