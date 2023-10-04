@@ -1,11 +1,11 @@
-About pangeo-forge-runner
-=========================
+About pangeo-forge-runner-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pangeo-forge-runner-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pangeo-forge/pangeo-forge-runner
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pangeo-forge-runner-feedstock/blob/main/LICENSE.txt)
 
 Summary: Commandline tool to manage pangeo-forge feedstocks
 
