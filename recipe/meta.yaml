@@ -11,7 +11,10 @@ source:
 
 build:
   entry_points:
-	@@ -18,15 +18,18 @@ build:
+    - pangeo-forge-runner=pangeo_forge_runner.cli:main
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  noarch: python
 
 requirements:
   host:
@@ -30,7 +33,21 @@ requirements:
 
 test:
   imports:
-	@@ -48,3 +51,4 @@ about:
+    - pangeo_forge_runner
+  commands:
+    - pip check
+    - pangeo-forge-runner --help
+  requires:
+    - pip
+
+about:
+  home: https://github.com/pangeo-forge/pangeo-forge-runner
+  summary: Commandline tool to manage pangeo-forge feedstocks
+  doc_url: https://pangeo-forge-runner.readthedocs.io/
+  dev_url: https://github.com/pangeo-forge/pangeo-forge-runner
+  license: Apache-2.0
+  license_file: LICENSE
+
 extra:
   recipe-maintainers:
     - andersy005
