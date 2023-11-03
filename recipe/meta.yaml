@@ -30,6 +30,7 @@ requirements:
     - escapism  
     - jsonschema  
     - traitlets  
+    - apache-beam ==2.42.0
 
 test:
   imports:
