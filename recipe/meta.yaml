@@ -18,19 +18,18 @@ build:
 
 requirements:
   host:
+    - pip
     - python >=3.9
     - setuptools >=45
     - setuptools-scm >=6.2
-    - pip
   run:
-    - importlib-metadata
-    - python >=3.9
-    - jupyter-repo2docker
-    - ruamel.yaml
     - escapism
+    - importlib-metadata
     - jsonschema
+    - jupyter-repo2docker
+    - python >=3.9
+    - ruamel.yaml
     - traitlets
-    - apache-beam ==2.42.0
 
 test:
   imports:
