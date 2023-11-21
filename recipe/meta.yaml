@@ -38,6 +38,7 @@ test:
     - pip check
     - pangeo-forge-runner --help
   requires:
+    - apache-beam
     - fsspec
     - pip
 
