@@ -39,6 +39,7 @@ test:
     - pip check
     - pangeo-forge-runner --help
   requires:
+    - fsspec
     - pip
 
 about:
