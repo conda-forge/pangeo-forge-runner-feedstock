@@ -1,5 +1,5 @@
 {% set name = "pangeo-forge-runner" %}
-{% set version = "0.9.4" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pangeo-forge-runner-{{ version }}.tar.gz
-  sha256: e92684f9a32eaebbae1f7db4fb1984737c161072ae1ef6862dea5a05838fcfa6
+  sha256: 68370acad51a34cb24ea8f907b5aad5b71ad707fe454ea4b09c9dec18ce48369
 
 build:
   entry_points:
@@ -23,6 +23,8 @@ requirements:
     - setuptools >=45
     - setuptools-scm >=6.2
   run:
+    - fsspec
+    - venvception >=0.0.5
     - escapism
     - importlib-metadata
     - jsonschema
