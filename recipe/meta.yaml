@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pangeo-forge-runner-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pangeo-forge-runner-{{ version }}.tar.gz
   sha256: e92684f9a32eaebbae1f7db4fb1984737c161072ae1ef6862dea5a05838fcfa6
 
 build:
   entry_points:
     - pangeo-forge-runner=pangeo_forge_runner.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - setuptools-scm >=6.2
   run:
@@ -27,7 +27,7 @@ requirements:
     - importlib-metadata
     - jsonschema
     - jupyter-repo2docker
-    - python >=3.9
+    - python >={{ python_min }}
     - ruamel.yaml
     - traitlets
 
@@ -41,6 +41,7 @@ test:
     - apache-beam
     - fsspec
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pangeo-forge/pangeo-forge-runner
